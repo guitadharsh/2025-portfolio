@@ -28,7 +28,7 @@ export default function Home() {
         >
           <div className="relative w-[80%] sm:w-[340px] md:w-[420px] lg:w-[500px] aspect-3/4 overflow-hidden rounded-xl border border-border bg-card shadow-[0_6px_30px_rgba(0,0,0,0.2)]">
             <Image
-              src="/assets/actor-3.png"
+              src="/assets/images/actor-3.png"
               alt="Adharsh D portrait"
               fill
               className="object-cover saturate-[0.9] contrast-[1.1]"
