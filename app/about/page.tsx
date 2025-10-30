@@ -24,7 +24,7 @@ const About = () => {
         </h2>
 
         <p className="text-stone-700 leading-relaxed text-base md:text-lg font-serif">
-          I’m a <strong>Malayali</strong>rooted in Kerala, India. A{" "}
+          I’m a <strong>Malayali</strong> rooted in Kerala, India. A{" "}
           <strong>software developer</strong> by profession and a{" "}
           <strong>music enthusiast</strong> by heart. With around{" "}
           <strong>3 years of experience</strong> in building digital products,
