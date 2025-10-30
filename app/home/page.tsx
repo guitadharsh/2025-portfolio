@@ -39,6 +39,9 @@ export default function Home() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-primary tracking-tight leading-tight drop-shadow-sm">
             Adharsh D
           </h1>
+          <p className="text-xl sm:text-2xl font-semibold bg-linear-to-r from-[#d1a054] to-[#8b6e4b] bg-clip-text text-transparent italic font-serif mt-2 tracking-wide drop-shadow-md">
+            Software Developer
+          </p>
 
           {/* Tagline */}
           <p className="text-base sm:text-lg md:text-xl italic text-muted-foreground max-w-md mx-auto md:mx-0">
@@ -54,8 +57,8 @@ export default function Home() {
 
           {/* Malayalam line for personal nostalgic touch */}
           <p className="text-sm sm:text-base italic text-primary/80 font-serif max-w-lg mx-auto md:mx-0 leading-relaxed">
-            “സംഗീതവും കോഡും രണ്ടും എനിക്ക് മനസിലായിട്ടില്ല പക്ഷെ ഞാൻ അതിനെ മനസിലാക്കാൻ ശ്രമിക്കൽ നടത്താറുണ്ട് ”
-            <span className="text-foreground/60"> (One Chord or One line of code at a time.)</span>
+            “സംഗീതവും കോഡും രണ്ടും എനിക്ക് മനസിലായിട്ടില്ല പക്ഷെ അതിനെ മനസിലാക്കാൻ ഉള്ള ശ്രമങ്ങൾ ഞാൻ നടത്താറുണ്ട് ”
+            <span className="text-foreground/60"><br />One Chord or One line of code at a time.</span>
           </p>
 
           {/* Button */}
