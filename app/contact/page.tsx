@@ -65,55 +65,77 @@ const Contact: React.FC = () => {
         </p>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          {/* Email Field */}
           <label className="flex flex-col gap-1">
-            <span className="text-sm text-[#6a5845]">Your Email</span>
+            <span className="text-xs sm:text-sm text-[#6a5845]">Your Email</span>
             <input
               type="email"
               name="email"
               required
               value={form.email}
               onChange={handleChange}
-              className="p-3 rounded-lg border border-[#cbb693]/60 bg-[#fffaf0] focus:outline-none focus:ring-2 focus:ring-[#b89664] placeholder:text-[#9b8974]/70"
+              className="
+        p-2 sm:p-3 
+        text-sm sm:text-base
+        rounded-lg border border-[#cbb693]/60 bg-[#fffaf0]
+        focus:outline-none focus:ring-2 focus:ring-[#b89664]
+        placeholder:text-[#9b8974]/60 sm:placeholder:text-[#9b8974]/70
+      "
               placeholder="example@email.com"
             />
           </label>
 
+          {/* Message Field */}
           <label className="flex flex-col gap-1">
-            <span className="text-sm text-[#6a5845]">Message</span>
+            <span className="text-xs sm:text-sm text-[#6a5845]">Message</span>
             <textarea
               name="message"
               required
               value={form.message}
               onChange={handleChange}
               rows={5}
-              className="p-3 rounded-lg border border-[#cbb693]/60 bg-[#fffaf0] resize-none focus:outline-none focus:ring-2 focus:ring-[#b89664] placeholder:text-[#9b8974]/70"
+              className="
+        p-2 sm:p-3 
+        text-sm sm:text-base
+        rounded-lg border border-[#cbb693]/60 bg-[#fffaf0] resize-none
+        focus:outline-none focus:ring-2 focus:ring-[#b89664]
+        placeholder:text-[#9b8974]/60 sm:placeholder:text-[#9b8974]/70
+      "
               placeholder="Write your message..."
             />
           </label>
 
+          {/* Submit Button */}
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             disabled={status === "sending"}
             type="submit"
-            className="flex justify-center items-center gap-2 bg-[#b89664] hover:bg-[#a48254] text-white font-medium py-3 rounded-full transition-all duration-300 shadow-md"
+            className="
+      flex justify-center items-center gap-2
+      bg-[#b89664] hover:bg-[#a48254] text-white font-medium
+      py-2.5 sm:py-3 px-3 sm:px-4
+      text-sm sm:text-base
+      rounded-full transition-all duration-300 shadow-md
+    "
           >
             {status === "sending" ? (
               <span>Sending...</span>
             ) : (
               <>
-                <SendHorizonal size={18} />
+                <SendHorizonal size={16} className="sm:w-[18px] sm:h-[18px]" />
                 <span>
                   {status === "sent"
                     ? "Sent ✓"
                     : status === "error"
-                    ? "Try Again"
-                    : "Send Message"}
+                      ? "Try Again"
+                      : "Send Message"}
                 </span>
               </>
             )}
           </motion.button>
         </form>
+        
       </motion.div>
     </section>
   );
