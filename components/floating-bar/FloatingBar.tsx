@@ -65,8 +65,6 @@ const FloatingBar = () => {
         const el = document.getElementById(id);
         if (el) {
             el.scrollIntoView({ behavior: "smooth", block: "start" });
-            setActiveSection(id);
-            setMenuOpen(false);
         }
     };
 
@@ -93,11 +91,11 @@ const FloatingBar = () => {
             </div>
 
             {/* Mobile View */}
-            <div className="sm:hidden fixed top-5 right-5 z-50 flex flex-col items-end">
+            <div className="md:hidden fixed bottom-155 left-26 z-50 flex flex-col items-end">
                 <motion.button
                     onClick={() => setMenuOpen((prev) => !prev)}
                     whileTap={{ scale: 0.9 }}
-                    className="w-14 h-14 rounded-full bg-[#f5e6c8] border border-[#b89664] shadow-lg flex justify-center items-center text-[#3b2f2f] cursor-pointer"
+                    className="w-12 h-12 rounded-full bg-[#f5e6c8] border border-[#b89664] shadow-lg flex justify-center items-center text-[#3b2f2f] cursor-pointer"
                 >
                     {menuOpen ? <X size={22} /> : <Menu size={22} />}
                 </motion.button>
