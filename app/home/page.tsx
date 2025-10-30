@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import MusicBox from "@/components/music-box/MusicBox";
+import ResumeButton from "@/components/resume-button/ResumeButton";
 
 export default function Home() {
   return (
@@ -33,31 +33,35 @@ export default function Home() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          className="w-full md:w-1/2 text-center md:text-left space-y-4 sm:space-y-5 md:space-y-6 px-2 sm:px-0"
+          className="w-full md:w-1/2 text-center md:text-left space-y-5 sm:space-y-6 px-3 sm:px-0"
         >
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-primary tracking-tight leading-tight">
+          {/* Name */}
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-primary tracking-tight leading-tight drop-shadow-sm">
             Adharsh D
           </h1>
 
+          {/* Tagline */}
           <p className="text-base sm:text-lg md:text-xl italic text-muted-foreground max-w-md mx-auto md:mx-0">
-            Crafting modern digital experiences with a timeless vintage touch.
+            Crafting digital harmony where design, code, and music flow together.
           </p>
 
+          {/* Description */}
           <p className="text-sm sm:text-base md:text-lg text-foreground/90 max-w-lg mx-auto md:mx-0 leading-relaxed">
-            I’m a full-stack developer passionate about creating thoughtful,
-            aesthetic, and high-performing web applications — blending design,
-            technology, and nostalgia.
+            I’m a full-stack developer and a passionate music lover 🎸 who blending technology,
+            art, and emotion to build web experiences that feel timeless. When not coding,
+            you’ll find me learning guitar strings that echo the rhythm of creativity.
           </p>
 
-          <div className="pt-4 flex justify-center md:justify-start">
-            <Button
-              size="lg"
-              className="bg-primary text-primary-foreground hover:bg-accent transition-all rounded-md shadow-md text-sm sm:text-base md:text-lg px-5 sm:px-7"
-            >
-              View My Work
-            </Button>
-          </div>
+          {/* Malayalam line for personal nostalgic touch */}
+          <p className="text-sm sm:text-base italic text-primary/80 font-serif max-w-lg mx-auto md:mx-0 leading-relaxed">
+            “സംഗീതവും കോഡും രണ്ടും എനിക്ക് മനസിലായിട്ടില്ല പക്ഷെ ഞാൻ അതിനെ മനസിലാക്കാൻ ശ്രമിക്കൽ നടത്താറുണ്ട് ”
+            <span className="text-foreground/60"> (One Chord or One line of code at a time.)</span>
+          </p>
+
+          {/* Button */}
+          <ResumeButton />
         </motion.div>
+
       </section>
     </main>
   );
