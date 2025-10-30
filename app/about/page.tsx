@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section className="flex flex-col md:flex-row items-center justify-center gap-8 px-6 py-12 max-w-5xl mx-auto text-center md:text-left">
       {/* 👨‍👩‍👧 Family Image */}
-      <div className="relative w-48 h-48 md:w-70 md:h-70 rounded-2xl overflow-hidden shadow-lg border border-stone-300">
+      <div className="relative w-48 h-48 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-lg border border-stone-300">
         <Image
           src={familyImage}
           alt="My Family"
