@@ -8,15 +8,6 @@ import MusicBox from "@/components/music-box/MusicBox";
 export default function Home() {
   return (
     <main className="relative min-h-screen flex flex-col justify-center items-center text-foreground overflow-hidden">
-      {/* 🎵 Floating MusicBox */}
-      <motion.div
-        animate={{ rotate: [0, 2, -2, 0] }}
-        transition={{ duration: 6, repeat: Infinity }}
-        className="absolute top-6 right-6 md:top-10 md:right-16 z-20 scale-75 sm:scale-90 md:scale-100"
-      >
-        <MusicBox />
-      </motion.div>
-
       {/* 🖼 HERO SECTION */}
       <section className="flex flex-col md:flex-row items-center justify-center w-full px-4 sm:px-8 md:px-16 py-12 md:py-20 lg:py-28 gap-10 md:gap-16 max-w-7xl mx-auto">
         {/* LEFT SIDE - Hero Image */}
