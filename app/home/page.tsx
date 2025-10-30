@@ -8,15 +8,23 @@ export default function Home() {
   return (
     <main className="relative min-h-screen flex flex-col justify-center items-center text-foreground overflow-hidden">
       {/* 🖼 HERO SECTION */}
-      <section className="flex flex-col md:flex-row items-center justify-center w-full px-4 sm:px-8 md:px-16 py-12 md:py-20 lg:py-28 gap-10 md:gap-16 max-w-7xl mx-auto">
+      <section
+        className="
+          flex flex-col md:flex-row items-center justify-center
+          w-full px-4 sm:px-6 md:px-10 lg:px-16
+          py-8 sm:py-10 md:py-20 lg:py-24
+          gap-6 sm:gap-8 md:gap-14 lg:gap-20
+          max-w-6xl mx-auto
+        "
+      >
         {/* LEFT SIDE - Hero Image */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          className="w-full md:w-1/2 flex justify-center md:justify-end"
+          className="w-[70%] sm:w-[320px] md:w-[380px] lg:w-[460px] flex justify-center md:justify-end"
         >
-          <div className="relative w-[80%] sm:w-[340px] md:w-[420px] lg:w-[500px] aspect-3/4 overflow-hidden rounded-xl border border-border bg-card shadow-[0_6px_30px_rgba(0,0,0,0.2)]">
+          <div className="relative w-full aspect-[3/4] overflow-hidden rounded-xl border border-border bg-card shadow-[0_6px_30px_rgba(0,0,0,0.2)]">
             <Image
               src="/assets/images/actor-3.png"
               alt="Adharsh D portrait"
@@ -32,38 +40,54 @@ export default function Home() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          className="w-full md:w-1/2 text-center md:text-left space-y-5 sm:space-y-6 px-3 sm:px-0"
+          className="
+            w-full md:w-1/2
+            text-center md:text-left
+            space-y-3 sm:space-y-4 md:space-y-6
+            px-2 sm:px-0
+          "
         >
-          {/* Name */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-primary tracking-tight leading-tight drop-shadow-sm">
-            Adharsh D
-          </h1>
-          <p className="text-xl sm:text-2xl font-semibold bg-linear-to-r from-[#d1a054] to-[#8b6e4b] bg-clip-text text-transparent italic font-serif mt-2 tracking-wide drop-shadow-md">
-            Software Developer
-          </p>
+          {/* Name + Subtitle Closer Together */}
+          <div className="space-y-1 sm:space-y-1.5">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary leading-tight tracking-tight">
+              Adharsh D
+            </h1>
+            <p className="text-lg sm:text-xl md:text-2xl font-semibold bg-gradient-to-r from-[#d1a054] to-[#8b6e4b] bg-clip-text text-transparent italic font-serif tracking-wide">
+              Software Developer
+            </p>
+          </div>
 
-          {/* Tagline */}
-          <p className="text-base sm:text-lg md:text-xl italic text-muted-foreground max-w-md mx-auto md:mx-0">
+          {/* Tagline (hidden on mobile to save space) */}
+          <p className="hidden sm:block text-base md:text-lg italic text-muted-foreground max-w-md mx-auto md:mx-0 leading-snug">
             Crafting digital harmony where design, code, and music flow together.
           </p>
 
-          {/* Description */}
-          <p className="text-sm sm:text-base md:text-lg text-foreground/90 max-w-lg mx-auto md:mx-0 leading-relaxed">
-            I’m a full-stack developer and a passionate music lover 🎸 who blending technology,
-            art, and emotion to build web experiences that feel timeless. When not coding,
-            you’ll find me learning guitar strings that echo the rhythm of creativity.
+          {/* Description (shortened on mobile) */}
+          <p className="text-sm sm:text-base text-foreground/90 max-w-lg mx-auto md:mx-0 leading-relaxed">
+            <span className="sm:hidden">
+              I’m a full-stack developer & music lover 🎸 blending creativity and code.
+            </span>
+            <span className="hidden sm:inline">
+              I’m a full-stack developer and a passionate music lover 🎸 blending
+              technology, art, and emotion to build web experiences that feel timeless.
+              When not coding, I’m learning guitar strings that echo the rhythm of creativity.
+            </span>
           </p>
 
-          {/* Malayalam line for personal nostalgic touch */}
+          {/* Malayalam line */}
           <p className="text-sm sm:text-base italic text-primary/80 font-serif max-w-lg mx-auto md:mx-0 leading-relaxed">
-            “സംഗീതവും കോഡും രണ്ടും എനിക്ക് മനസിലായിട്ടില്ല പക്ഷെ അതിനെ മനസിലാക്കാൻ ഉള്ള ശ്രമങ്ങൾ ഞാൻ നടത്താറുണ്ട് ”
-            <span className="text-foreground/60"><br />One Chord or One line of code at a time.</span>
+            “സംഗീതവും കോഡും രണ്ടും എനിക്ക് മനസിലായിട്ടില്ല പക്ഷെ അതിനെ മനസിലാക്കാൻ ഉള്ള ശ്രമങ്ങൾ ഞാൻ നടത്താറുണ്ട്”
+            <br />
+            <span className="text-foreground/60">
+              One chord or one line of code at a time.
+            </span>
           </p>
 
-          {/* Button */}
-          <ResumeButton />
+          {/* Button (raised slightly) */}
+          <div className="pt-1 sm:pt-3 md:pt-4">
+            <ResumeButton />
+          </div>
         </motion.div>
-
       </section>
     </main>
   );
