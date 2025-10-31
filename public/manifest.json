@@ -1,0 +1,21 @@
+{
+  "name": "Adharsh D Portfolio",
+  "short_name": "Adharsh D",
+  "description": "Software Developer & Designer | Portfolio of Adharsh D",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF3E0",
+  "theme_color": "#b89664",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

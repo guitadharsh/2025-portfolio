@@ -8,7 +8,11 @@ import { siteMetadata } from "./constants";
 
 const garamond = EB_Garamond({ subsets: ["latin"] });
 
-export const metadata: Metadata = siteMetadata;
+export const metadata: Metadata = {
+  ...siteMetadata,
+  manifest: "/manifest.json",
+};
+
 
 export default function RootLayout({
   children,

@@ -33,7 +33,7 @@ export const siteMetadata: Metadata = {
     siteName: "Adharsh D Portfolio",
     images: [
       {
-        url: "/images/og-image.png",
+        url: "images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Adharsh D Portfolio Preview",
@@ -47,7 +47,7 @@ export const siteMetadata: Metadata = {
     title: "Adharsh D | Software Developer",
     description:
       "Full-stack developer & creative technologist from Kerala. Let’s build something beautiful.",
-    images: ["/images/og-image.png"],
+    images: ["images/og-image.png"],
     creator: "@adharshd",
   },
   icons: {
