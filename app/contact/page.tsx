@@ -2,7 +2,7 @@
 
 import { useState, ChangeEvent, FormEvent } from "react";
 import { motion } from "framer-motion";
-import { SendHorizonal } from "lucide-react";
+import { SendHorizonal, Github, Linkedin, Instagram, Mail } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
 interface FormData {
@@ -61,9 +61,10 @@ const Contact: React.FC = () => {
           Get in Touch
         </h2>
         <p className="text-sm italic text-center text-[#7b6651]/80 mb-6">
-          “Drop me a note — I’d love to hear from you.”
+          “Drop me a note I’d love to hear from you.”
         </p>
 
+        {/* 🌸 Contact Form */}
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           {/* Email Field */}
           <label className="flex flex-col gap-1">
@@ -75,12 +76,11 @@ const Contact: React.FC = () => {
               value={form.email}
               onChange={handleChange}
               className="
-        p-2 sm:p-3 
-        text-sm sm:text-base
-        rounded-lg border border-[#cbb693]/60 bg-[#fffaf0]
-        focus:outline-none focus:ring-2 focus:ring-[#b89664]
-        placeholder:text-[#9b8974]/60 sm:placeholder:text-[#9b8974]/70
-      "
+                p-2 sm:p-3 text-sm sm:text-base
+                rounded-lg border border-[#cbb693]/60 bg-[#fffaf0]
+                focus:outline-none focus:ring-2 focus:ring-[#b89664]
+                placeholder:text-[#9b8974]/60 sm:placeholder:text-[#9b8974]/70
+              "
               placeholder="example@email.com"
             />
           </label>
@@ -95,12 +95,11 @@ const Contact: React.FC = () => {
               onChange={handleChange}
               rows={5}
               className="
-        p-2 sm:p-3 
-        text-sm sm:text-base
-        rounded-lg border border-[#cbb693]/60 bg-[#fffaf0] resize-none
-        focus:outline-none focus:ring-2 focus:ring-[#b89664]
-        placeholder:text-[#9b8974]/60 sm:placeholder:text-[#9b8974]/70
-      "
+                p-2 sm:p-3 text-sm sm:text-base
+                rounded-lg border border-[#cbb693]/60 bg-[#fffaf0] resize-none
+                focus:outline-none focus:ring-2 focus:ring-[#b89664]
+                placeholder:text-[#9b8974]/60 sm:placeholder:text-[#9b8974]/70
+              "
               placeholder="Write your message..."
             />
           </label>
@@ -112,12 +111,12 @@ const Contact: React.FC = () => {
             disabled={status === "sending"}
             type="submit"
             className="
-      flex justify-center items-center gap-2
-      bg-[#b89664] hover:bg-[#a48254] text-white font-medium
-      py-2.5 sm:py-3 px-3 sm:px-4
-      text-sm sm:text-base
-      rounded-full transition-all duration-300 shadow-md
-    "
+              flex justify-center items-center gap-2
+              bg-[#b89664] hover:bg-[#a48254] text-white font-medium
+              py-2.5 sm:py-3 px-3 sm:px-4
+              text-sm sm:text-base
+              rounded-full transition-all duration-300 shadow-md
+            "
           >
             {status === "sending" ? (
               <span>Sending...</span>
@@ -128,14 +127,56 @@ const Contact: React.FC = () => {
                   {status === "sent"
                     ? "Sent ✓"
                     : status === "error"
-                      ? "Try Again"
-                      : "Send Message"}
+                    ? "Try Again"
+                    : "Send Message"}
                 </span>
               </>
             )}
           </motion.button>
         </form>
-        
+
+        {/* 🌐 Social Links */}
+        <div className="mt-8 flex justify-center gap-5 sm:gap-6">
+          {[
+            {
+              icon: <Github size={18} />,
+              href: "https://github.com/guitadharsh",
+              label: "GitHub",
+            },
+            {
+              icon: <Linkedin size={18} />,
+              href: "https://linkedin.com/in/adharsh-d",
+              label: "LinkedIn",
+            },
+            {
+              icon: <Instagram size={18} />,
+              href: "https://www.instagram.com/adharshd.in",
+              label: "Instagram",
+            },
+            {
+              icon: <Mail size={18} />,
+              href: "mailto:adharshd100@gmail.com",
+              label: "Email",
+            },
+          ].map(({ icon, href, label }) => (
+            <motion.a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              whileHover={{ scale: 1.15, rotate: 5 }}
+              className="
+                w-10 h-10 sm:w-11 sm:h-11 flex justify-center items-center
+                rounded-full border border-[#cbb693]/70 bg-[#fffaf0]
+                hover:bg-[#b89664] hover:text-white transition-all duration-300
+                shadow-sm hover:shadow-md
+              "
+            >
+              {icon}
+            </motion.a>
+          ))}
+        </div>
       </motion.div>
     </section>
   );
