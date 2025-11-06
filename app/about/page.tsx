@@ -16,9 +16,9 @@ const About = () => {
 
       {/* 💬 About Content */}
       <div className="max-w-xl space-y-4">
-        <h2 className="text-2xl md:text-3xl font-serif text-primary flex items-baseline gap-2 flex-wrap">
+        <h2 className="text-2xl md:text-3xl font-serif text-primary flex flex-wrap items-baseline gap-2 md:items-end">
           A Family Boy from Kerala
-          <div className="text-sm sm:text-base italic text-primary/80 font-serif">
+          <div className="text-sm sm:text-base italic text-primary/80 font-serif block w-full md:text-left">
             തിരുവനന്തപുരം
           </div>
         </h2>

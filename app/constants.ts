@@ -131,7 +131,7 @@ export const experiences = [
       "Working for Zomato, Swiggy, and as a medical firm salesperson drove me to pursue a long-term, high-paying job. I still remember those days under the sunlight; it truly taught me the value of every rupee, where a normal delivery only earned me ₹20-30.",
   },
   {
-    id: 7, // Corrected ID (was 6)
+    id: 7,
     title: "Graduation",
     subtitle: "Kerala University",
     year: "July 2018 - Mar 2021",
@@ -140,21 +140,21 @@ export const experiences = [
       "A time filled with amazing memories, friends, and events. COVID-19 ate up a year and we had to exit college during the pandemic, but I still cherish the good times. Honestly, I wasn't that interested in the subjects back then, but now I dream of going back to learn everything properly and understand the real value of each topic.",
   },
   {
-    id: 8, // Corrected ID (was 7)
+    id: 8,
     title: "Higher Secondary (VHSE)",
     subtitle: "Computer Science and Information Technologoy",
     year: "July 2016 - Mar 2018",
     image: exp8,
     description:
-      "If I could, I'd get stuck in this loop to relive and enjoy these beautiful days again and again. Teachers, buddies—every day was lovable. These experiences gifted me true friends who still have that 18-year-old vibe. It was a time of tasting life and growing up. (There may have been a little love story in there too... 😉)",
+      "This chapter felt like the beautiful, unrestricted days of my life, a true relief after the highly structured years before. If I could, I'd get stuck in this loop to relive and enjoy them again and again. Every day was lovable, filled with true friends who still carry that 18-year-old vibe. A special shout-out to Lisa Teacher, our class tutor, who was truly amazing and supportive—her teachings are something I remember throughout my life. It was a time of tasting freedom, forging true friendships, and experiencing the sweet, defining emotions of a first serious crush that perfectly captured that memorable period of growing up."
   },
   {
-    id: 9, // Corrected ID (was 8)
+    id: 9,
     title: "10th Kairali Vidya Bhavan",
     subtitle: "CBSE",
     year: "July 2016 - Mar 2018",
     image: exp9,
     description:
-      "From junior to 10th standard, I considered this CBSE school a bit like a jail—I didn't have many friends or great days. But in 10th grade, I joined the school's **band troop**, which changed everything! I made a lot of memories there, and the photo I've used above is the one and only memory I cherish from those times.",
+      "My initial years weren't my most memorable, as I didn't connect with many people. But in 10th grade, I joined the school's Band troop, which changed everything! I made a lot of cherished memories there, and the photo I've used above is the one and only memory I often revisit from those times.",
   },
 ];
