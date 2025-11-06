@@ -133,3 +133,18 @@
   }
 
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Works on Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* Prevent horizontal overflow globally */
+html,
+body {
+  overflow-x: hidden;
+}

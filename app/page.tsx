@@ -1,12 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Home, About, Contact } from "@/app";
+import { Home, About, Contact, Experience } from "@/app";
 
 const sections = [
   { id: "home", Component: Home },
   { id: "about", Component: About },
-  { id: "contact", Component: Contact },
+  { id: "experience", Component: Experience },
+  { id: "contact", Component: Contact }
 ];
 
 const fadeInUp = {
