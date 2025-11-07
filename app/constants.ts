@@ -96,21 +96,21 @@ export const experiences = [
   },
   {
     id: 3,
-    title: "Maptell Geosystems",
-    subtitle: "Independent",
-    year: "Dec 2023 - June 2024",
-    image: exp3,
-    description:
-      "Maptell was a career-changing firm where I got an opportunity via Scipy. I worked on a map-based project as a frontend developer, diving deep into **Mapbox** and **Deck.gl** and playing with different types of map tiles. A huge thanks to Jithesh Chettan for the mentorship and support during difficult times—that guidance became real fuel for the rest of my career.",
-  },
-  {
-    id: 4,
     title: "Scipy Technologies",
     subtitle: "MERN stack developer",
     year: "July 2022 - July 2024",
     image: exp4,
     description:
       "Scipy Technologies was the first firm that believed in my skill set when I had 0 experience. Thank you for that amazing opportunity, which became the kick-start for my career as a software developer.",
+  },
+  {
+    id: 4,
+    title: "Maptell Geosystems",
+    subtitle: "Contract Project via Scipy Technologies",
+    year: "Dec 2023 - June 2024",
+    image: exp3,
+    description:
+      "Maptell was a career-changing firm where I got an opportunity via Scipy. I worked on a map-based project as a frontend developer, diving deep into Mapbox and Deck.gl and playing with different types of map tiles. A huge thanks to Jithesh Chettan for the mentorship and support during difficult times—that guidance became real fuel for the rest of my career.",
   },
   {
     id: 5,
