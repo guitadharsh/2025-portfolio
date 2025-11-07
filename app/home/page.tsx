@@ -84,9 +84,10 @@ export default function Home() {
           </p>
 
           {/* Button (raised slightly) */}
-          <div className="pt-1 sm:pt-3 md:pt-4">
+          <div className="flex justify-center md:justify-end">
             <ResumeButton />
           </div>
+
         </motion.div>
       </section>
     </main>

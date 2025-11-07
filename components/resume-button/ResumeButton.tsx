@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function ResumeButton() {
   return (
-    <div className="pt-4 flex justify-center md:justify-start group" title="Click to download my resume">
+    <div className="flex justify-center md:justify-start group" title="Click to download my resume">
       <Link href="/assets/docs/resume.pdf" download>
         <Button
           size="lg"

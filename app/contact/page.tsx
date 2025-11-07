@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="w-full max-w-md bg-[#fff8ec]/80 border border-[#d8c4a1]/70 rounded-3xl shadow-lg p-8 backdrop-blur-md"
+        className="w-full max-w-lg bg-[#fff8ec]/80 border border-[#d8c4a1]/70 rounded-3xl shadow-lg p-8 backdrop-blur-md"
       >
         <h2 className="text-2xl md:text-3xl font-serif text-primary text-center mb-2">
           Get in Touch
@@ -93,7 +93,7 @@ const Contact: React.FC = () => {
               required
               value={form.message}
               onChange={handleChange}
-              rows={5}
+              rows={3}
               className="
                 p-2 sm:p-3 text-sm sm:text-base
                 rounded-lg border border-[#cbb693]/60 bg-[#fffaf0] resize-none
@@ -111,9 +111,9 @@ const Contact: React.FC = () => {
             disabled={status === "sending"}
             type="submit"
             className="
-              flex justify-center items-center gap-2
+              cursor-pointer flex justify-center items-center gap-2
               bg-[#b89664] hover:bg-[#a48254] text-white font-medium
-              py-2.5 sm:py-3 px-3 sm:px-4
+              py-2 px-3 sm:px-4
               text-sm sm:text-base
               rounded-full transition-all duration-300 shadow-md
             "
