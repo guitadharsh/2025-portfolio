@@ -65,10 +65,10 @@ export default function Home() {
           {/* Description (shortened on mobile) */}
           <p className="text-sm sm:text-base text-foreground/90 max-w-lg mx-auto md:mx-0 leading-relaxed">
             <span className="sm:hidden">
-              I’m a full-stack developer & music lover 🎸 blending creativity and code.
+              I’m a full-stack developer & music lover blending creativity and code.
             </span>
             <span className="hidden sm:inline">
-              I’m a full-stack developer and a passionate music lover 🎸 blending
+              I’m a full-stack developer and a passionate music lover blending
               technology, art, and emotion to build web experiences that feel timeless.
               When not coding, I’m learning guitar strings that echo the rhythm of creativity.
             </span>
