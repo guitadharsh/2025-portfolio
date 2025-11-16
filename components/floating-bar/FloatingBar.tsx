@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Home, User, Briefcase, Mail, Menu, X } from "lucide-react";
+import { Home, User, Briefcase, Mail, Menu, X, BookText } from "lucide-react";
 
 const FloatingBar = () => {
     const [activeSection, setActiveSection] = useState("home");
@@ -29,6 +29,7 @@ const FloatingBar = () => {
         { id: "home", label: "Home", icon: Home },
         { id: "about", label: "About", icon: User },
         { id: "experience", label: "Experience", icon: Briefcase },
+        { id: "blog", label: "Blog", icon: BookText },
         { id: "contact", label: "Contact", icon: Mail },
     ];
 

@@ -1,12 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Home, About, Contact, Experience } from "@/app";
+import { Home, About, Contact, Experience, Blog } from "@/app";
 
 const sections = [
   { id: "home", Component: Home },
   { id: "about", Component: About },
   { id: "experience", Component: Experience },
+  { id: "blog", Component: Blog },
   { id: "contact", Component: Contact }
 ];
 
