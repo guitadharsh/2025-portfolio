@@ -6,6 +6,7 @@ import MusicBox from "@/components/music-box/MusicBox";
 import ChellomAssistant from "@/components/chellom-ai/ChellomAssistant";
 import FloatingBar from "@/components/floating-bar/FloatingBar";
 import { siteMetadata } from "./constants";
+import SnowFall from "@/components/snow-fall/SnowFall"
 
 const garamond = EB_Garamond({ subsets: ["latin"] });
 
@@ -40,6 +41,7 @@ export default function RootLayout({
       <body className="relative bg-[#FAF3E0] text-[#2E2B29] min-h-screen overflow-x-hidden">
         {children}
         <MusicBox />
+        <SnowFall />
         <FloatingBar />
         <ChellomAssistant />
       </body>
