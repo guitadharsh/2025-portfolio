@@ -43,7 +43,7 @@ export default function RootLayout({
         <MusicBox />
         <SnowFall />
         <FloatingBar />
-        <ChellomAssistant />
+        {/* <ChellomAssistant /> */}
       </body>
     </html>
   );
