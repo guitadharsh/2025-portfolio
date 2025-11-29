@@ -24,9 +24,9 @@ export default function Home() {
           transition={{ duration: 1 }}
           className="w-[70%] sm:w-[320px] md:w-[380px] lg:w-[460px] flex justify-center md:justify-end"
         >
-          <div className="relative w-full aspect-[3/4] overflow-hidden rounded-xl border border-border bg-card shadow-[0_6px_30px_rgba(0,0,0,0.2)]">
+          <div className="relative w-full aspect-[4/5] overflow-hidden rounded-xl border border-border bg-card shadow-[0_6px_30px_rgba(0,0,0,0.2)]">
             <Image
-              src="/assets/images/actor-3.png"
+              src="/assets/images/actor-5.png"
               alt="Adharsh D portrait"
               fill
               className="object-cover saturate-[0.9] contrast-[1.1]"

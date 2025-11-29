@@ -72,7 +72,7 @@ const FloatingBar = () => {
     return (
         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 select-none">
             {/* Desktop View */}
-            <div className="hidden sm:flex items-center gap-4 px-4 py-2 bg-[#f5e6c8]/90 border border-[#c4a574]/50 rounded-full shadow-md font-serif backdrop-blur-md">
+            <div className="hidden sm:flex items-center gap-4 px-4 py-2 bg-[#f5e6c80e] border border-[#c4a574]/50 rounded-full shadow-md font-serif backdrop-blur-md">
                 {navItems.map(({ id, label, icon: Icon }) => (
                     <motion.button
                         key={id}
@@ -81,7 +81,7 @@ const FloatingBar = () => {
                         whileTap={{ scale: 0.95 }}
                         className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-sm transition-all cursor-pointer
             ${activeSection === id
-                                ? "bg-[#e1c699] text-[#3b2f2f] border border-[#b89664] shadow-inner"
+                                ? "bg-[#e1c7995a] text-[#3b2f2f] border border-[#b89664] shadow-inner"
                                 : "hover:bg-[#f2d9b6]/70 text-[#3b2f2f]/80"
                             }`}
                     >
