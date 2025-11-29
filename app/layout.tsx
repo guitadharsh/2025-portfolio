@@ -4,6 +4,7 @@ import { EB_Garamond } from "next/font/google";
 import "./globals.css";
 import MusicBox from "@/components/music-box/MusicBox";
 import ChellomAssistant from "@/components/chellom-ai/ChellomAssistant";
+import SantaDance from "@/components/santa-dance/SantaDance";
 import FloatingBar from "@/components/floating-bar/FloatingBar";
 import { siteMetadata } from "./constants";
 import SnowFall from "@/components/snow-fall/SnowFall"
@@ -43,6 +44,7 @@ export default function RootLayout({
         <MusicBox />
         <SnowFall />
         <FloatingBar />
+        <SantaDance />
         {/* <ChellomAssistant /> */}
       </body>
     </html>
