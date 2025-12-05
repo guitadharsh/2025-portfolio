@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { headers } from "next/headers";
 import { EB_Garamond } from "next/font/google";
 import "./globals.css";
 import MusicBox from "@/components/music-box/MusicBox";
@@ -9,6 +8,7 @@ import SantaDance from "@/components/santa-dance/SantaDance";
 import FloatingBar from "@/components/floating-bar/FloatingBar";
 import { siteMetadata } from "./constants";
 import SnowFall from "@/components/snow-fall/SnowFall"
+import RestrictedWrapper from "@/components/restricted-module/page";
 
 const garamond = EB_Garamond({ subsets: ["latin"] });
 
@@ -23,9 +23,6 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pathname = (await headers()).get("x-pathname") || "";
-  const isCarol = pathname.startsWith("/carol");
-
   return (
     <html lang="en" className={garamond.className}>
 
@@ -45,9 +42,11 @@ export default async function RootLayout({
 
       <body className="relative bg-[#FAF3E0] text-[#2E2B29] min-h-screen overflow-x-hidden">
         {children}
-        {!isCarol && <MusicBox />}
-        <SnowFall />
-        <FloatingBar />
+        <RestrictedWrapper restrictedKeys={['carol']}>
+          <MusicBox />
+          <SnowFall />
+          <FloatingBar />
+        </RestrictedWrapper>
         <SantaDance />
         {/* <ChellomAssistant /> */}
       </body>
