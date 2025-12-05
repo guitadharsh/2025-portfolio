@@ -44,9 +44,9 @@ export default async function RootLayout({
         {children}
         <RestrictedWrapper restrictedKeys={['carol']}>
           <MusicBox />
-          <SnowFall />
           <FloatingBar />
         </RestrictedWrapper>
+        <SnowFall />
         <SantaDance />
         {/* <ChellomAssistant /> */}
       </body>
