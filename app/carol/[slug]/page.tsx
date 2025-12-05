@@ -15,7 +15,7 @@ export default async function SongPage({ params }: { params: { slug: string } })
 
       {/* Render stanzas and chorus */}
       <div className="space-y-8">
-        {song.parts.map((part, index) => (
+        {song?.parts.map((part, index) => (
           <div key={index} className="bg-white/90 p-4 rounded-xl shadow-sm">
             <h3 className="text-xl font-semibold mb-3">
               {part?.type === "chorus" ? "Chorus" : `Stanza ${index + 1}`}
