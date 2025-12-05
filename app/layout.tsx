@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { headers } from "next/headers";
 import { EB_Garamond } from "next/font/google";
 import "./globals.css";
 import MusicBox from "@/components/music-box/MusicBox";
@@ -17,11 +18,14 @@ export const metadata: Metadata = {
 };
 
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = (await headers()).get("x-pathname") || "";
+  const isCarol = pathname.startsWith("/carol");
+
   return (
     <html lang="en" className={garamond.className}>
 
@@ -41,7 +45,7 @@ export default function RootLayout({
 
       <body className="relative bg-[#FAF3E0] text-[#2E2B29] min-h-screen overflow-x-hidden">
         {children}
-        <MusicBox />
+        {!isCarol && <MusicBox />}
         <SnowFall />
         <FloatingBar />
         <SantaDance />
