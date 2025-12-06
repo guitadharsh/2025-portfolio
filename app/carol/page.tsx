@@ -10,6 +10,10 @@ export default function SongIndexPage() {
   const [query, setQuery] = useState("");
 
   useEffect(() => {
+    localStorage.setItem("visitedCarol", "true");
+  }, [])
+
+  useEffect(() => {
     const cachedRaw = localStorage.getItem("songs-cache");
 
     if (cachedRaw) {
@@ -23,7 +27,7 @@ export default function SongIndexPage() {
           setSongs(cached);
           return;
         }
-      } catch {}
+      } catch { }
     }
 
     localStorage.setItem("songs-cache", JSON.stringify(allSongs));
@@ -40,7 +44,7 @@ export default function SongIndexPage() {
 
   return (
     <div className="min-h-screen px-4 pb-24 max-w-xl mx-auto">
-      
+
       {/* Sticky Header */}
       <div className="sticky top-0 z-40 backdrop-blur-lg bg-white/20 border-b border-gray-200/30 pt-5 pb-4 shadow-sm rounded-sm px-2 sm:px-0">
         <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-center text-gray-800 tracking-tight">

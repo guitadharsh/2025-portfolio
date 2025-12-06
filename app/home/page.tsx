@@ -2,9 +2,20 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import ResumeButton from "@/components/resume-button/ResumeButton";
+import { useEffect } from "react";
 
 export default function Home() {
+  const router = useRouter();
+
+  useEffect(() => {
+    const visitedCarol = localStorage.getItem("visitedCarol");
+    if (visitedCarol === "true") {
+      router.replace("/carol");
+    }
+  }, [router]);
+
   return (
     <main className="relative min-h-screen flex flex-col justify-center items-center text-foreground overflow-hidden">
       {/* 🖼 HERO SECTION */}
@@ -14,11 +25,12 @@ export default function Home() {
           w-full px-4 sm:px-6 md:px-10 lg:px-16
           py-8 sm:py-10 md:py-20 lg:py-24
           gap-6 sm:gap-8 md:gap-14 lg:gap-20
-          max-w-6xl mx-auto
+          max-w-6xl mx-auto cursor-pointer
         "
       >
         {/* LEFT SIDE - Hero Image */}
-        <motion.div
+        <motion.a
+          href="/carol"
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
@@ -33,7 +45,7 @@ export default function Home() {
               priority
             />
           </div>
-        </motion.div>
+        </motion.a>
 
         {/* RIGHT SIDE - Text */}
         <motion.div
