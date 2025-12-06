@@ -13,26 +13,51 @@ export default function SongIndexPage() {
     localStorage.setItem("visitedCarol", "true");
   }, [])
 
+  // useEffect(() => {
+  //   const cachedRaw = localStorage.getItem("songs-cache");
+
+  //   if (cachedRaw) {
+  //     try {
+  //       const cached = JSON.parse(cachedRaw);
+  //       const isSameLength = cached.length === allSongs.length;
+  //       const isSameContent =
+  //         JSON.stringify(cached.map((s: any) => s.slug)) ===
+  //         JSON.stringify(allSongs.map((s) => s.slug));
+  //       if (isSameLength && isSameContent) {
+  //         setSongs(cached);
+  //         return;
+  //       }
+  //     } catch { }
+  //   }
+
+  //   localStorage.setItem("songs-cache", JSON.stringify(allSongs));
+  //   setSongs(allSongs);
+  // }, []);
+
   useEffect(() => {
     const cachedRaw = localStorage.getItem("songs-cache");
 
     if (cachedRaw) {
       try {
         const cached = JSON.parse(cachedRaw);
-        const isSameLength = cached.length === allSongs.length;
-        const isSameContent =
-          JSON.stringify(cached.map((s: any) => s.slug)) ===
-          JSON.stringify(allSongs.map((s) => s.slug));
-        if (isSameLength && isSameContent) {
+
+        // Compare the entire JSON string
+        const isSameContent = JSON.stringify(cached) === JSON.stringify(allSongs);
+
+        if (isSameContent) {
           setSongs(cached);
           return;
         }
-      } catch { }
+      } catch (err) {
+        console.error("Failed to parse cached songs", err);
+      }
     }
 
+    // Save fresh data to localStorage
     localStorage.setItem("songs-cache", JSON.stringify(allSongs));
     setSongs(allSongs);
   }, []);
+
 
   const normalizedQuery = query.toLowerCase().replace(/\s+/g, "-");
 
